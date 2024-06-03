@@ -8,7 +8,8 @@
         "nkro": true,
         "rgblight": false,
         "rgb_matrix": true,
-        "oled": true
+        "oled": true,
+        "os_detection": true
     },
     "matrix_pins": {
         "cols": ["GP3", "GP4", "GP5", "GP6", "GP7", "GP8", "GP9"],

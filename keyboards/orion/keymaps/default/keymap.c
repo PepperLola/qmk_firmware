@@ -71,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       * ┌───┬───┬───┬───┬───┬───┐       ┌───┬───┬───┬───┬───┬───┐
       * │QKB│XXX│XXX│XXX│XXX│XXX│       │XXX│XXX│XXX│XXX│XXX│XXX│
       * ├───┼───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┼───┤
-      * │RTG│RHI│RSI│RVI│XXX│XXX│       │XXX│XXX│XXX│XXX│XXX│XXX│
+      * │RTG│RHI│RSI│RVI│XXX│XXX│       │PRV│PLY│SKP│MVU│XXX│XXX│
       * ├───┼───┼───┼───┼───┼───┤       ├───┼───┼───┼───┼───┼───┤
-      * │RMD│RHD│RSD│RVD│XXX│XXX│       │XXX│XXX│XXX│XXX│XXX│XXX│
+      * │RMD│RHD│RSD│RVD│XXX│XXX│       │XXX│XXX│MMT│MVD│XXX│XXX│
       * └───┴───┴───┴───┴───┴───┘       └───┴───┴───┴───┴───┴───┘
       *               ┌───┐                   ┌───┐
       *               │GUI├───┐           ┌───┤Alt│
@@ -83,8 +83,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       */
     [3] = LAYOUT_split_3x6_3(
         QK_BOOT,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,                               XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
-        RGB_TOG,    RGB_HUI,    RGB_SAI,    RGB_VAI,    XXXXXXX,    XXXXXXX,                               XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
-        RGB_MOD,    RGB_HUD,    RGB_SAD,    RGB_VAD,    XXXXXXX,    XXXXXXX,                               XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
+        RGB_TOG,    RGB_HUI,    RGB_SAI,    RGB_VAI,    XXXXXXX,    XXXXXXX,                               KC_F7,      KC_F8,      KC_F9,      KC_F12,    XXXXXXX,    XXXXXXX,
+        RGB_MOD,    RGB_HUD,    RGB_SAD,    RGB_VAD,    XXXXXXX,    XXXXXXX,                               XXXXXXX,    XXXXXXX,    KC_F10,     KC_F11,    XXXXXXX,    XXXXXXX,
                                                         KC_LGUI,    _______,    KC_SPC,        KC_ENT,     _______,    KC_RALT
     )
 };
@@ -121,10 +121,3 @@ bool oled_task_user(void) {
     return false;
 }
 #endif
-void keyboard_post_init_user(void) {
-  // Customise these values to desired behaviour
-  debug_enable=true;
-  debug_matrix=true;
-  debug_keyboard=true;
-  //debug_mouse=true;
-}
