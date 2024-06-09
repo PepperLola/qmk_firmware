@@ -19,3 +19,8 @@
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
 #define MASTER_LEFT
+#define DEBUT_TO_SCREEN 1
+
+#define I2C_DRIVER I2CD1
+#define I2C1_SDA_PIN GP26
+#define I2C1_SCL_PIN GP27
